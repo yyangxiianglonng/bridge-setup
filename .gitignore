@@ -12,6 +12,7 @@
 # production
 /bridge-setup-backend/build
 /bridge-setup-frontend/build
+/bridge-setup-docker/db
 
 # misc
 .DS_Store
