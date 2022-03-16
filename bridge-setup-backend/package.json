@@ -10,8 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apollo-datasource-mongodb": "^0.5.2",
     "apollo-server": "^3.6.3",
+    "apollo-server-express": "^3.6.3",
     "graphql": "^16.3.0",
+    "graphql-tools": "^8.2.0",
+    "graphql-tools-fork": "^9.0.1",
+    "mongoose": "^6.2.4",
     "nodemon": "^2.0.15"
   }
 }
