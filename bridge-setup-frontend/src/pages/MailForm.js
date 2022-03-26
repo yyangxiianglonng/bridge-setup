@@ -5,7 +5,7 @@
  * @LastEditTime: 2022-03-15 17:50:32
  * @FilePath: /bridge-setup/bridge-setup-frontend/src/pages/Mailform.js
  */
-import { Form, Input, InputNumber, Button } from 'antd';
+import { Form, Input, Button } from 'antd';
 export default function MailForm() {
     const layout = {
         labelCol: { span: 4 },
@@ -23,13 +23,6 @@ export default function MailForm() {
             range: '${label} must be between ${min} and ${max}',
         },
     };
-    /* eslint-enable no-template-curly-in-string */
-
-    const Demo = () => {
-        const onFinish = (values) => {
-            console.log(values);
-        }
-    }
 
     return (
         <Form {...layout} name="nest-messages" validateMessages={validateMessages}>

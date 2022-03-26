@@ -1,5 +1,3 @@
-const { gql } = require("apollo-server-express");
-
 /*
  * @Author: yangxianglong
  * @Description: 
@@ -7,18 +5,10 @@ const { gql } = require("apollo-server-express");
  * @LastEditTime: 2022-03-15 15:04:47
  * @FilePath: /bridge-setup/bridge-setup-backend/type-defs/index.js
  */
+const { gql } = require("apollo-server-express");
 const typeDefs = gql`
-  type Email {
-    _id: String
-    usedby: String
-    mailaddress: String
-    password:String
-    customercode:String
-  }
-
   type Query {
-    emails: [Email]
-    email(id:ID!):Email
+    foo:String
   }
 `
 

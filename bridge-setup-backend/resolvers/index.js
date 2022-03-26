@@ -7,13 +7,8 @@
  */
 const resolvers = {
     Query: {
-        async emails(parent, args, { dataSources }) {
-            const emails = await dataSources.emails.getEmails()
-            return emails
-        },
-        async email(parent, { id }, { dataSources }) {
-            const email = await dataSources.emails.getEmail(id)
-            return email
+        foo() {
+            return 'hello'
         }
     }
 }
