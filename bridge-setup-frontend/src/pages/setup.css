@@ -1,0 +1,21 @@
+/* 默认卡片颜色 */
+.ant-card {
+    border-radius: 1.5em;
+    background-color:rgb(234, 235, 241);
+}
+.ant-card .ant-card-head{
+    font-size: large;
+    font-weight: 600;
+}
+.ant-image {
+    width: 600px;
+}
+
+/* 复制板式样 */
+.clipy {
+    /* background-color: #e6f7ff; */
+}
+.clipy:hover{
+    font-size: large;
+    background-color:#7ec1ff;
+}
