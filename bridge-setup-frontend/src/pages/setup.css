@@ -1,21 +1,39 @@
 /* 默认卡片颜色 */
 .ant-card {
-    border-radius: 1.5em;
-    background-color:rgb(234, 235, 241);
+    border-radius: 1em;
+    background-color: rgb(234, 235, 241);
 }
-.ant-card .ant-card-head{
+
+.ant-card .ant-card-head {
     font-size: large;
     font-weight: 600;
 }
+
 .ant-image {
     width: 600px;
 }
 
 /* 复制板式样 */
 .clipy {
+    height: 30px;
+    display: inline-block;
     /* background-color: #e6f7ff; */
 }
-.clipy:hover{
+
+.clipy:hover {
     font-size: large;
-    background-color:#7ec1ff;
+    border-radius: 5px;
+    background-color: #7ec1ff;
+}
+
+/* 下载按钮式样 */
+.downloady {
+    height: 30px;
+    display: inline-block;
+}
+
+.downloady:hover {
+    font-size: large;
+    border-radius: 5px;
+    background-color: #7ec1ff;
 }

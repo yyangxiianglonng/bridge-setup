@@ -24,12 +24,12 @@ export default function Daitohkigyo_setup() {
             <br />
             <br />
             <Card title="1. DELL製PCの確認項目" extra={<Checkbox />}>
-                <p>BitLockerが有効なWindows10搭載して出荷されたDellシステムのファクトリーイメージに復元しようとする際にエラーが発生する現象</p>
-                <p>デバイスの暗号化をオフにする方法</p>
+                <p>1. <a target='_blank' href='https://www.dell.com/support/kbdoc/ja-jp/000124701/%e8%87%aa%e5%8b%95-windows-%e3%83%87%e3%83%90%e3%82%a4%e3%82%b9%e6%9a%97%e5%8f%b7%e5%8c%96-dell-%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0'>BitLockerが有効なWindows10搭載して出荷されたDellシステムのファクトリーイメージに復元しようとする際にエラーが発生する現象</a></p>
+                <p>2. <a target='_blank' href='https://www.dell.com/community/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%A8OS/%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%81%AE%E6%9A%97%E5%8F%B7%E5%8C%96%E3%82%92%E3%82%AA%E3%83%95%E3%81%AB%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/td-p/7246036'>デバイスの暗号化をオフにする方法</a></p>
             </Card>
             <br />
             <Card title="2. ユーザー設定" extra={<Checkbox />}>
-                <p>Microsoftアカウントでサインインはスキップしてオフラインアカウントを選択</p>
+                <p>1. Microsoftアカウントでサインインはスキップしてオフラインアカウントを選択</p>
                 <Row justify='start'>
                     <Col sm={24} md={12} lg={6} xl={4}>
                         <CopyToClipboard text='admin' onCopy={() => { message.success('ユーザーIDをコピーしました') }}>
@@ -49,18 +49,22 @@ export default function Daitohkigyo_setup() {
             </Card >
             <br />
             <Card title="Chromeをインストール" extra={<Checkbox />}>
-                <p><a target='_blank' href='https://www.google.com/chrome/'>download</a></p>
+                <span className='downloady'><a target='_blank' href='https://www.google.com/chrome/'>Chromeをダウンロード</a></span>
             </Card>
             <br />
             <Card title="edgeをタスクバーからピン留めを外す。" extra={<Checkbox />}>
-                <p>アイコンを右クリック、タスクバーからピン留めを外す </p>
+                <p>1. アイコンを右クリック、タスクバーからピン留めを外す </p>
             </Card>
             <br />
             <Card title="TeamViewerをインストール" extra={<Checkbox />}>
-                <p><a target='_blank' href='https://get.teamviewer.com/daitoh'>download</a></p>
-                <CopyToClipboard text='Bridge2019!2' onCopy={() => { message.success('パスワードをクリップボードにコピーしました') }}>
-                    <p>パスワード: [ Bridge2019!2 ]</p>
-                </CopyToClipboard>
+                <span className='downloady'><a target='_blank' href='https://get.teamviewer.com/daitoh'>TeamViewerをダウンロード</a></span>
+                <Row justify='start'>
+                    <Col sm={24} md={12} lg={6} xl={4}>
+                        <CopyToClipboard text='Bridge2019!2' onCopy={() => { message.success('パスワードをクリップボードにコピーしました') }}>
+                            <span className='clipy'>パスワード: [ Bridge2019!2 ]</span>
+                        </CopyToClipboard>
+                    </Col>
+                </Row>
             </Card>
             <br />
             <Card title="explzhをインストール" extra={<Checkbox />}>

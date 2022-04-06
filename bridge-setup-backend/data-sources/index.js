@@ -1,8 +1,8 @@
 const dbModel = require('../models')
-const Emails = require('./email')
+const Users = require('./user')
 
 module.exports = () => {
     return {
-        emails: new Emails(dbModel.Email)
+        users: new Users(dbModel.User)
     }
 }

@@ -1,22 +1,20 @@
-/*
- * @Author: yangxianglong
- * @Description: mongodb连接，mongo模型导出。
- * @Date: 2022-03-15 10:04:32
- * @LastEditTime: 2022-03-15 12:46:20
- * @FilePath: /bridge-setup/bridge-setup-backend/models/index.js
- */
-
 const mongoose = require('mongoose');
 const { dbUri } = require('../config/config.default')
 
-
+// 连接MongoDB 数据库
 mongoose.connect(dbUri);
+
 const db = mongoose.connection;
+
+// 当连接失败的时候
 db.on('error', console.error.bind(console, 'connection error:'));
+
+// 当连接成功的时候
 db.once('open', function () {
     console.log('connection success')
 });
 
+// 组织导出模型类
 module.exports = {
-    Email: require('./email')
+    User: require('./user')
 }
