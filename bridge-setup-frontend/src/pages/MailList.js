@@ -85,6 +85,6 @@ export default function MailList() {
         },
     ];
     return (
-        <Table columns={columns} dataSource={data} />
+        <Table columns={columns} dataSource={data} style={{ marginTop: '60px' }} />
     )
 }

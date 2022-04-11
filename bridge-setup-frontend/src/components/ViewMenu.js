@@ -1,37 +1,66 @@
-/*
- * @Author: yangxianglong
- * @Description: 
- * @Date: 2022-03-12 23:43:25
- * @LastEditTime: 2022-03-15 18:31:22
- * @FilePath: /bridge-setup/bridge-setup-frontend/src/components/ViewMenu.js
- */
 import React from 'react'
 import { renderRoutes } from 'react-router-config';
 import routes from '../router';
+import { HeaderWrapper, HeaderLeft } from './style'
 import { NavLink } from 'react-router-dom';
 import { Layout, Menu, Breadcrumb } from 'antd';
-const { Header, Content, Footer } = Layout;
+const { Content, Footer } = Layout;
 
 
 export default function ViewMenu() {
+
+    const headerLinks = [
+        {
+            title: "メール",
+            link: "/maillist"
+        },
+        {
+            title: "メール追加",
+            link: "/mailform"
+        },
+        {
+            title: "セットアップ",
+            link: "/setup"
+        },
+    ]
+
+    // 页面代码
+    const showSelectItem = (item, index) => {
+        if (index < 4) {
+            return (
+                <NavLink to={item.link}>
+                    {item.title}
+                    <i className="sprite_01 icon"></i>
+                </NavLink>
+            )
+        } else {
+            return <a href={item.link}>{item.title}</a>
+        }
+    }
+
     return (
         <Layout style={{ margin: '0 15%' }}>
-            <Header style={{ position: 'fixed', zIndex: 1, width: '70%' }}>
-                <div className="logo" />
-                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-                    <Menu.Item key="1">
-                        <NavLink exact to="/maillist" activeClassName="link-active">MailList</NavLink>
-                    </Menu.Item>
-                    <Menu.Item key="2">
-                        <NavLink to="/mailform" activeClassName="link-active">MailFrom</NavLink>
-                    </Menu.Item>
-                    <Menu.Item key="3">
-                        <NavLink to="/daitohkigyo" activeClassName="link-active">大東企業PCセットアップ</NavLink>
-                    </Menu.Item>
-                </Menu>
-            </Header>
-
-            <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
+            {/* <Header style={{ position: 'fixed', zIndex: 1, width: '70%' }}> */}
+            < HeaderWrapper >
+                <div className="content wrap-v1">
+                    <HeaderLeft>
+                        <a href="#/" className="logo sprite_01">bridge-setup</a>
+                        <div className="select-list">
+                            {
+                                headerLinks.map((item, index) => {
+                                    return (
+                                        <div key={item.title} className="select-item">
+                                            {showSelectItem(item, index)}
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </HeaderLeft>
+                </div>
+                <div className="divider"></div>
+            </HeaderWrapper>
+            {/* <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
                 <Breadcrumb style={{ margin: '16px 0' }}>
                     <Breadcrumb.Item>Home</Breadcrumb.Item>
                     <Breadcrumb.Item>List</Breadcrumb.Item>
@@ -40,8 +69,8 @@ export default function ViewMenu() {
                 <div className="site-layout-background" style={{ padding: 24, minHeight: 820 }}>
                     {renderRoutes(routes)}
                 </div>
-            </Content>
-            <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
-        </Layout >
+            </Content> */}
+            {/* <Footer style={{ textAlign: 'center' }}>Bridge Set ©2022 Created by Bridger</Footer> */}
+        </Layout>
     )
 }

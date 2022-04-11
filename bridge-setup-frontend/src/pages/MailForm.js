@@ -25,7 +25,7 @@ export default function MailForm() {
     };
 
     return (
-        <Form {...layout} name="nest-messages" validateMessages={validateMessages}>
+        <Form {...layout} name="nest-messages" validateMessages={validateMessages} style={{ marginTop: '60px' }}>
             <Form.Item name={['user', 'name']} label="顧客名" rules={[{ required: true }]}>
                 <Input />
             </Form.Item>
