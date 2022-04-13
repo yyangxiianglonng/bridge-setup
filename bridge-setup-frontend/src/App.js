@@ -1,11 +1,12 @@
 import { HashRouter } from 'react-router-dom';
-import ViewMenu from './components/ViewMenu';
 import './App.css'
-import React, { memo, Suspense } from 'react';
+import ViewMenu from './components/ViewMenu';
+import React, { Suspense } from 'react';
 import { renderRoutes } from 'react-router-config';
 import routes from './router';
-import { Layout, Breadcrumb } from 'antd';
+import { Layout } from 'antd';
 const { Content, Footer } = Layout;
+
 function App() {
   return (
     <div className="App">
@@ -14,7 +15,7 @@ function App() {
           <ViewMenu />
           <Suspense>
             <Content style={{ margin: '0 15%', height: '100%' }} >
-              <div className="site-layout-background" style={{ minHeight: 820 }}>
+              <div>
                 {renderRoutes(routes)}
               </div>
             </Content>
