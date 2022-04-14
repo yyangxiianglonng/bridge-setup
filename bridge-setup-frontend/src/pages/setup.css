@@ -20,13 +20,12 @@
 
 /* 复制板式样 */
 .clipy {
-    height: 30px;
     display: inline-block;
-    /* background-color: #e6f7ff; */
+    text-align: center;
+    background-color: #e2e5e7;
+    border-radius: 3px;
 }
 
 .clipy:hover {
-    font-size: large;
-    border-radius: 5px;
-    background-color: #7ec1ff;
+    color: #C20C0C;
 }

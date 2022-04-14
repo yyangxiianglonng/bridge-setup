@@ -1,10 +1,3 @@
-/*
- * @Author: yangxianglong
- * @Description: 
- * @Date: 2022-03-15 17:48:46
- * @LastEditTime: 2022-03-15 17:50:32
- * @FilePath: /bridge-setup/bridge-setup-frontend/src/pages/Mailform.js
- */
 import { Form, Input, Button } from 'antd';
 export default function MailForm() {
     const layout = {
